@@ -16,17 +16,19 @@ File or Folder | Purpose
 - Open a new terminal and run `cds watch`
 - (in VS Code simply choose _**Terminal** > Run Task > cds watch_)
 - Start with your domain model, in a CDS file in `db/`
-cf cs hana hdi-shared FirstCapDev-db
-cds add hana
-cf cs xsuaa application FirstCapDev-auth -c xs-security.json
-cds bind --to FirstCapDev-db,FirstCapDev-auth
-router>npm i
-cds bind --exec -- npm start --prefix app/router
-cf update-service FirstCapDev-auth -c xs-security.json
-cds build
-cds deploy
-mbt build
-cf deploy
+
+
+- cf cs hana hdi-shared FirstCapDev-db
+- cds add hana
+- cf cs xsuaa application FirstCapDev-auth -c xs-security.json
+- cds bind --to FirstCapDev-db,FirstCapDev-auth
+- router>npm i
+- cds bind --exec -- npm start --prefix app/router
+- cf update-service FirstCapDev-auth -c xs-security.json
+- cds build
+- cds deploy
+- mbt build
+- cf deploy
 
 
 ## Learn More
