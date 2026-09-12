@@ -1,0 +1,126 @@
+{
+	"_version": "1.89.0",
+	"sap.app": {
+		"id": "master",
+		"type": "application",
+		"i18n": {
+			"bundleUrl": "i18n/i18n.properties",
+			"supportedLocales": [
+				""
+			]
+		},
+		"applicationVersion": {
+			"version": "0.0.1"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"resources": "resources.json",
+		"sourceTemplate": {
+			"id": "@sap/generator-fiori:basic",
+			"version": "1.32.0",
+			"toolsId": "875f8ec9-3518-4c0c-872b-cb81b320440e"
+		},
+		"dataSources": {
+			"mainService": {
+				"uri": "/odata/v4/master/",
+				"type": "OData",
+				"settings": {
+					"annotations": [],
+					"odataVersion": "4.0"
+				}
+			}
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+	"sap.ui5": {
+		"flexEnabled": true,
+		"dependencies": {
+			"minUI5Version": "1.152.0",
+			"libs": {
+				"sap.m": {},
+				"sap.ui.core": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "master.i18n.i18n",
+					"supportedLocales": [
+						""
+					]
+				}
+			},
+			"": {
+				"dataSource": "mainService",
+				"preload": true,
+				"settings": {
+					"operationMode": "Server",
+					"autoExpandSelect": true,
+					"earlyRequests": true
+				}
+			}
+		},
+		"resources": {
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"controlAggregation": "pages",
+				"controlId": "app",
+				"transition": "slide",
+				"type": "View",
+				"viewType": "XML",
+				"path": "master.view",
+				"async": true,
+				"viewPath": "master.view"
+			},
+			"routes": [
+				{
+					"name": "RouteMasterView",
+					"pattern": ":?query:",
+					"target": [
+						"TargetMasterView"
+					]
+				}
+			],
+			"targets": {
+				"TargetMasterView": {
+					"id": "MasterView",
+					"name": "MasterView"
+				}
+			}
+		},
+		"rootView": {
+			"viewName": "master.view.App",
+			"type": "XML",
+			"id": "App",
+			"async": true
+		},
+		"flexBundle": false
+	}
+}

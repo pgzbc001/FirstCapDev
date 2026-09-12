@@ -1,0 +1,2 @@
+sap.ui.define(["sap/ui/core/mvc/Controller"],function(e){"use strict";const n=e.extend("master.controller.MasterView",{onInit:function e(){}});return n});
+//# sourceMappingURL=MasterView.controller.js.map
