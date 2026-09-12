@@ -21,3 +21,13 @@ mta_archives/
 # auto generated wildcard
 db/.env
 app/master/dist/
+app/master/dist/Component-preload.js
+app/master/dist/Component-preload.js.map
+app/master/dist/master.zip
+app/master/dist/sap-ui-cachebuster-info.json
+app/master/dist/controller/MasterView-dbg.controller.js
+app/master/dist/controller/MasterView-dbg.controller.js.map
+app/master/dist/controller/MasterView.controller.js
+app/master/dist/controller/MasterView.controller.js.map
+app/master/dist/controller/MasterView.controller.ts
+app/master/dist/view/MasterView.view.xml
