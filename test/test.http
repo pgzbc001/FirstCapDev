@@ -1,0 +1,7 @@
+POST http://localhost:4004/odata/v4/master/Master
+Content-Type: application/json
+
+{
+    "code": "918",
+    "value": "v918"
+}
